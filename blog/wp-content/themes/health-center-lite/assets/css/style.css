@@ -1,0 +1,940 @@
+/*@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|PT+Sans:400,400i,700,700i'); */
+
+@media(min-width:1320px){
+	.container{width:1280px}
+}
+
+h1,h2,h3,h4,h5,h6{font-family: 'Playfair Display', serif;}
+p{font-family: 'Open Sans', sans-serif;}
+header{position:fixed;top:78px;left:0;right:0;width:100%;background-color:transparent;z-index:999;}
+header.header_fixed{box-shadow:0 0 10px rgba(0,0,0,0.6);top:0;background-color: #fff;padding: 0 0 10px 0;-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+header.header_fixed .navbar-default .navbar-header .navbar-brand{width:70%;-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+header .navbar-default{background-color:transparent;border-color:transparent;text-align:center;margin:0;-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+header.header_fixed .navbar-default{-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+.top-content .navbar-header .navbar-brand{height:auto;padding:5px 5px;width:75%;position:relative;z-index:9999;-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+.navbar-default .navbar-collapse{border-color:transparent;float:none}
+header .navbar-nav{float:none;text-align:center;margin:35px 0 0 0;background-color:#fff;padding:8px 0;-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+header.header_fixed .navbar-nav{padding:10px 0 0px 0;margin:0;-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+header .navbar-nav > li{float:none;display:inline-block}
+header .navbar-default .navbar-nav > li > a{font-family: 'Montserrat', sans-serif;font-size:15px;font-weight:400;padding-bottom:5px;color:#464646;position:relative;padding:10px 8px}
+header .navbar-default .navbar-nav > li.active > a{background-color:transparent;position:relative}
+header .navbar-default .navbar-nav > li.active > a:before{position:absolute;content:'';height:2px;width:30px;left:50%;bottom:0;margin-left:-15px;background-color:#f09a2d;opacity:1}
+header .navbar-default .navbar-nav > li.active > a:hover, header .navbar-default .navbar-nav > li.active > a:focus{background-color:transparent}
+header .navbar-default .navbar-nav > li > a:before{position:absolute;content:'';height:2px;width:30px;left:50%;bottom:0;margin-left:-15px;background-color:#f09a2d;opacity:0}
+header .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{background-color:transparent}
+header .navbar-default .navbar-nav > li > a:hover:before{opacity:1}
+header .navbar-default .navbar-nav > li .dropdown-menu{display:none;border-color:transparent;font-family: 'Montserrat', sans-serif;box-shadow:none;background-color:#2e498e;padding:0; opacity:0; filter:alpha(opacity=0);}
+header .navbar-default .navbar-nav > li:hover .dropdown-menu{opacity:1; filter:alpha(opacity=100);display:block}
+
+header .navbar-default .navbar-nav > li .dropdown-menu li a{font-family: 'Montserrat', sans-serif;font-size:15px;font-weight:400;color:#fff;padding:10px 20px;}
+header .navbar-default .navbar-nav > li:hover .dropdown-menu li a:hover, header .navbar-default .navbar-nav > li:hover .dropdown-menu li a:focus{color:#333}
+.social-icons{float:right;padding:25px 0 25px 0;-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+header.header_fixed .social-icons{padding:17px 0 17px 0;-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+.social-icons a{width:42px;height:42px;border-radius:50%;background-color:#f9f9f9;color:#a8a8a8;text-align:center;line-height:42px;display:inline-block;border:1px solid rgba(0,0,0,0.1)}
+.social-icons a:hover, .social-icons a:focus{background-color:rgba(0,0,0,0.1);border:1px solid #f9f9f9;color:#fff}
+.close-menu{display:none}
+/* .main-banner{background:url(../images/partnership.jpg)center center no-repeat;background-size:cover;margin-top:92px;position:relative} */
+/* .main-banner .carousel-inner{margin-top:92px}
+.main-banner .carousel-inner .item img{width:100%}
+.main-banner .carousel-inner .item .carousel-caption{position:absolute;left:10px;right:10px;text-align:center;top:50%;transform:translateY(-50%);bottom:auto}
+.main-banner .carousel-inner .item .carousel-caption h2{display:inline-block;background-color:rgba(0,0,0,0.6);padding:20px;margin:0;font-size:45px;font-weight:700}
+.main-banner .carousel-indicators li{background-color:#fff;border:1px solid #f29c2b}
+.main-banner .carousel-indicators .active{background-color:#f29c2b;border:1px solid #fff}
+.main-banner .carousel-control.left{background-image:none;background-repeat:no-repeat;left:20px}
+.main-banner .carousel-control.right{background-image:none;background-repeat:no-repeat;right:20px}
+.main-banner .carousel-control{position:absolute;top:50%;transform:translateY(-50%);bottom:auto;opacity:1;width:auto}
+.main-banner .carousel-control span{background-color:#fff;width:45px;height:45px;border:1px solid #f29c2b;color:#394da4;display:inline-block;line-height:45px;border-radius:100px;-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+.main-banner .carousel-control span:hover, .main-banner .carousel-control span:focus{background-color:#f29c2b;border:1px solid #fff;color:#fff}
+.main-trust-content{padding:300px 0;text-align:center}
+.main-trust-content h1{font-size:90px;font-weight:900;text-align:center;text-transform:uppercase;color:#fff;margin:0;position:relative}
+.main-trust-content p{color:#fff;font-size:36px;font-style:italic;font-weight:500;text-align:center;margin:0;position:relative}
+.main-trust-content img{margin:0 auto;margin-top:30px;display:inline-block;position:relative}
+.main-trust-content img:hover, .main-trust-content img:focus{outline:none;border-color:transparent}
+.main-banner-button{float:right;position:relative;margin-bottom:-20px}
+.main-banner-button .btn-primary{border-radius:0;padding:18px 40px 18px 100px;font-family: 'Montserrat', sans-serif;font-weight:600;font-size:18px}
+.main-banner-button .btn-primary:hover, .main-banner-button .btn-primary:focus{background-color:#f09a2d;border-color:transparent;box-shadow:none;border-color:transparent;border:1px solid #f09a2d}
+.main-banner-button .fa-phone{position:absolute;left:0;top:0;bottom:0;background-color:#c91a17;padding:18px;color:#fff;font-size:30px}
+ */
+/*****************************home-page****************************************/
+.top-content{padding-top:20px;background-color:transparent;position:absolute;left:0;right:0;z-index:9}
+.right-content .icon_text{float:right;margin-left:50px;width:410px;margin-left:30px;color:#fff}
+.right-content .icon_text .icon{position:relative;padding-right:20px;float:left;font-size:24px;margin-bottom:25px;color:#000}
+.addresss.right-content .icon_text .icon{color:#fff}
+.right-content .icon_text .text span{display:block}
+.addresss.right-content .icon_text .text{color: #fff;
+    display: flex;
+    align-items: center;}
+.addresss.right-content .icon_text .text a{
+    color: #fff;
+    margin: 5px 7px;
+}
+.addresss.right-content .icon_text .text a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+.right-content .icon_text .text{text-align:left;color:#000;font-weight:700;font-size:16px}
+.main-banner{width:100%;height:99vh;overflow:hidden}
+.main-banner video{/*height:111%;*/width:100%;}
+
+.bannerFormCapcha {
+    padding: 0px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+        display: flex;
+}
+
+.bannerFormCapcha span {
+    line-height: 42px;
+}
+.plus-captcha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerFormCapcha input[type="text"] {
+    padding: 10px;
+    outline: 0px;
+    border: 0px;
+    margin-bottom: 15px;
+    float: right;
+    border-radius: 3px;
+} 
+.get-call-back {
+    position: fixed;
+    top: 52%;
+    left: -67px;
+    background: #18405e;
+    color: #fff;
+    padding: 6px;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    display: block;
+    width: 166px;
+    margin-top: -28px;
+    -webkit-transition: all .5s ease 0s;
+    -moz-transition: all .5s ease 0s;
+    -ms-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(270deg);
+    z-index: 99999999;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 5px;
+    text-align: center;
+}
+.get-call-back:hover, .get-call-back:focus{
+    text-decoration: none;
+    color: #fff;
+}
+#Enquiry_Modal .modal-body {
+    padding: 0;
+    border-bottom: 0.3rem solid #11405f;
+}
+#Enquiry_Modal h5.modal-title {
+    text-align: center;
+    background-color: #11405f;
+    border-radius: 0px;
+    padding: 5px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    color: #fff;
+    font-size: 21px;
+}
+
+#Enquiry_Modal .btn-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    opacity: 1;
+    padding: 5px;
+    border-radius: 0;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    height: 25px;
+    width: 25px;
+}
+#Enquiry_Modal .fixed-form.fixed {
+    text-align: center;
+    display: block;
+    margin-top: 2rem;
+    padding: 0 30px;
+}
+#Enquiry_Modal .fixed-form .form-control, #Enquiry_Modal .fixed-form .form-control:focus {
+    margin-bottom: 0.8rem;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #11405f4d;
+}
+
+#Enquiry_Modal .plus-captcha {
+    display: flex;
+}
+#Enquiry_Modal .plus-captcha .plus-text {
+    margin: 5px 5px;
+}
+
+#Enquiry_Modal .fixed-form p {
+    margin-bottom: 7px !important;
+    text-align: center;
+    color: #11405f;
+    /* border-top: 1px dotted; */
+    padding-top: 4px;
+}
+#Enquiry_Modal .plus-captcha span {
+    margin-top: 7px;
+    margin: 6px 6px;
+}
+#Enquiry_Modal .fixed-form .formFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#Enquiry_Modal .fixed-form .formFooter button {
+    text-align: center;
+    background: #11405f;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    transition: all 300ms ease-in-out;
+    outline: none;
+    margin-bottom: 1rem;
+    width: 126px;
+}
+
+
+
+.country-strip{
+        background-color: #2e498e;
+    padding: 1.4rem 0;
+}
+.countries ul{
+    padding: 0;
+    margin: 0;
+}
+.countries ul li {
+    display: inline-block;
+}
+.countries ul li:after {
+    content: '|';
+    padding: 0 1rem;
+    color: #fbff00;
+}
+.countries ul li:first-child:after {
+    display: none;
+}
+.countries ul li:last-child:after {
+    display: none;
+}
+.countries ul li p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: 2rem;
+}
+.countries {
+    text-align: center;
+}
+
+.countries ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.country-strip2 {
+    background-color: #fff;
+}
+.country-strip2 ul li a{
+    color: #18405e;
+}
+.country-strip2 ul li p{
+    color: #18405e;
+}
+.country-strip2 .countries ul li:after {
+    color: #18405e;
+}
+
+
+
+.about-us{padding:80px 0}
+.about-us p{font-size:14px;line-height:25px;text-align:justify;margin:auto;padding-top:30px;}
+.about-us-vcauren{position:relative}
+.about-us-vcauren strong{position:absolute;left:2%;right:2%;top:-30px;font-size:105px;color:#f7f7f7;text-align:center;text-transform:uppercase;font-weight:800;line-height:105px;display:none}
+.about-us-vcauren h2{font-size:38px;margin-top:-20px;text-align:center;color:#222222;text-transform:uppercase;position:relative;line-height:56px;text-align:left}
+.about-us-vcauren h2 span{font-weight:700}
+.about-us-vcauren h2:before{position:absolute;content:'';height:3px;width:50px;background-color:#fff;bottom:-15px;left:0;margin-left:0px}
+.about-us-vcauren h1{font-size:25px; color:#fff;}
+
+.about-valuecent-image{position:relative}
+.vcauren-content{position: absolute;
+    background-color: rgba(46,73,142,0.8);
+    padding: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 550px;
+    left: 50px}
+.vcauren-content h2{color:#fff}
+.vcauren-content p{color:#fff}
+
+
+.our-services{background-color:#dddee4;padding:80px 0;border-bottom:3px solid #f09a2d}
+.our-services .row{margin:0 -8px}
+.our-services .row .col-md-4{padding:0 8px}
+.our-services .brno.row .col-md-4 .thumbnail, .our-services .brno.row .col-md-4 .thumbnail, .our-services .brno.row .col-md-4 .thumbnail{border-bottom:1px solid transparent;margin-bottom: 0px;padding-bottom: 0px;}
+.our-services-content{padding-top:0px}
+.our-services-content h2{text-align:center;text-transform:uppercase;position:relative;padding-bottom:20px;margin:0 0 20px 0;font-size:38px}
+.our-services-content h2 span{font-size:38px;font-weight:700}
+.our-services-content h2:before{position:absolute;content:'';left:50%;height:3px;width:50px;transform:translateX(-50%);background-color:#fff;bottom:0}
+.our-services-content p{font-size:16px;color:#666666;padding-top:35px}
+.our-services-button .btn-primary{margin-top:60px;padding:10px 60px;font-family: 'Montserrat', sans-serif;text-transform:uppercase;border-radius:40px;-webkit-transition:all 1.2s ease 0s;
+-moz-transition:all 1.2s ease 0s;
+-ms-transition:all 1.2s ease 0s;
+transition:all 1.2s ease 0s;}
+.our-services-button .btn-primary:hover, .our-services-button .btn-primary:focus{background-color:#222;color:#fff}
+.services-inner-boxes{background-color:#fff;padding:0px 25px 10px 25px;position:relative;float:left;margin:0}
+.services-inner-boxes:before{position:absolute;content:'';bottom:50px;height:2px;background-color:#f09a2d;}
+.valuecent-fullsection .thumbnail img{width:100px;padding:0 0 20px 0;margin:0}
+.valuecent-fullsection .caption h3{margin:0 0 10px 0;font-size:18px;text-transform:uppercase;color: #2e498e;font-weight: 700;}
+.valuecent-fullsection .thumbnail{background-color:transparent;margin-bottom: 30px;padding-bottom: 30px;border-bottom: 1px solid #fff;border-radius:0}
+
+
+       
+
+.valuecent-service-image{position:relative;display:block;overflow:hidden}
+.valuecent-service-image:before{position:absolute;top:0;bottom:0;right:0;left:0;background-color:rgba(0,0,0,0.8);content:'';opacity:0;-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+.valuecent-fullsection{overflow:hidden}
+.valuecent-fullsection:hover .valuecent-service-image:before{opacity:1}
+.valuecent-service-image .serviceicon{opacity:0;position:absolute;top:0;left:50%;transform:translate(-50%,-50%);-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+.valuecent-fullsection:hover .serviceicon{top:50%;opacity:1;}
+.services-inner-boxes h3{margin:0;font-size:18px;padding:15px 0;color:#f09a2d;text-align:center;text-transform:uppercase}
+.services-inner-boxes p{color:#545454;text-align:justify;min-height:105px;font-size:14px}
+.read-more-btn{padding:10px 0 0 0;margin:0;text-align:left}
+.read-more-btn .btn-transparent{border-bottom:1px solid #2e4d90;border-radius:0;padding:0}
+.read-more-btn .btn-transparent:hover, .valuecent-fullsection .read-more-btn .btn-transparent:focus{color:#fff}
+.read-more-btn .hvr-shutter-out-vertical:before{background-color:#f09a2d;color:#fff}
+.services-inner-boxes .btn-transparent{background-color:transparent;font-family: 'PT Sans', sans-serif;color:#f09a2d;font-size:16px;text-transform:uppercase;box-shadow:none;letter-spacing:1px}
+.services-inner-boxes .btn-transparent:hover, .services-inner-boxes .btn-transparent:focus{box-shadow:none;outline:none;border-color:transparent;border:1px solid transparent}
+ 
+.project-counting.global-economy{padding:0px;position:relative;}
+.project-counting.global-economy video{width:100%}
+/* .project-counting.global-economy:before{position:absolute;content:'';top:0;bottom:0;left:0;right:0;background-color:rgba(0,0,0,0.7);} */
+.project-counting.global-economy h2{color:#fff;margin:0;z-index:99;text-align:left;font-size:38px;position:relative;padding-bottom:40px;padding-left:60px}
+.project-counting.global-economy .countdown-content{text-align:center}
+.project-counting.global-economy .countdown-content img{margin:0 auto;width:100px}
+.project-counting.global-economy .countdown-content h3{color:#fff;font-size:36px;padding:15px 0;margin:0;position:relative;z-index:99;font-weight:800}
+.project-counting.global-economy .countdown-content p{font-size:20px;color:#fff;margin:0;position:relative;z-index:99}
+.project-counting-process{position:absolute;top:50%;transform:translateY(-50%);}
+
+
+
+
+.worldwide{padding-top:100px}
+.antea-memeber{background-color:#222222;padding-bottom:220px}
+
+
+.video-alliance-firms h3{font-size:24px;text-align:center;color:#222222;margin:0;padding-bottom:35px;text-transform:uppercase;font-weight:600}
+.video-alliance-firms .video-play-spacing{background-color:#fff;padding:15px 0;display:block}
+.video-alliance-firms .video-play-spacing img{margin:0 auto}
+.news-content.about-us-vcauren strong{color:#2b2b2b}
+.news-content.about-us-vcauren h2{color:#fff;letter-spacing:0;text-align:center}
+.news-content.about-us-vcauren strong{position:absolute;left:2%;right:2%;top:-30px;font-size:105px;color:#f7f7f7;text-align:center;text-transform:uppercase;font-weight:800;line-height:105px;display:block;opacity:0.05}
+.news-content.about-us-vcauren h2:before{left:50%;margin-left:-25px}
+.right-sidebar h4{margin-top:0px;margin-bottom:15px}
+.right-sidebar .media{overflow:hidden;position:relative;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(0,0,0,0.1)}
+.right-sidebar .media:last-child{border:none}
+.right-sidebar .media img{width: 120px;height: 100px;float: left;margin-right: 10px;object-fit: cover;}
+.right-sidebar .media h5{font-size:16px;font-weight:600}
+.right-sidebar .media p{font-size: 14px;border-bottom: 1px dashed rgba(0,0,0,0.2);padding-bottom: 15px;margin-bottom:0px}
+.right-sidebar .media p span{color: #f5b955;font-weight: 700;}
+.right-sidebar .media .price{padding:6px 0;border:none}
+.right-sidebar .slick-arrow{display:none!important}
+.latest-news{padding:80px 0;background:url(../images/services/news.jpg)center center no-repeat;background-attachment:fixed;background-size:cover}
+.our-services-content h4{font-size:20px;font-weight:600}
+.request-call-back{background-color:rgb(17 64 95 / 90%);padding:80px 0}
+.request-call-back h2{text-align:center;font-size:38px;margin:0 0 15px 0;color:#fff}
+.request-call-back .form-control{height:44px;border-radius:0px;border:none}
+
+/****************************************our-partner************************************************/
+.our-partner{position:relative}
+.our-partner .media{background-color:#f7f7f7;padding:20px 20px 20px 20px;margin-bottom:25px;position:relative}
+.our-partner .media i{position: absolute;
+    bottom: 10px;
+    right: 35px;
+    font-size: 110px;
+    color: #343434;
+    opacity: 0.03;
+}
+.our-partner .media .media-left{padding-right:25px}
+.our-partner .media .media-left img{width:100px;border-radius:200px}
+.our-partner .media .media-left h4{text-align: center;font-weight: 700;font-size: 16px;margin-top: 15px;}
+.our-partner .media .media-body{padding-left:25px;margin-left:25px;border-left:2px solid #e5e5e5;position:relative;overflow:visible;height:240px}
+.our-partner .media .media-body h5{font-size:18px;font-weight:700}
+.our-partner .media .media-body:before{position: absolute;content: '';left: -3px;top: 0px;background-color: #10405f;width: 4px;height: 35px;}
+
+
+/****************************************our-offices************************************************/
+.ouroffices.auditassurance{background:url(../images/services/offices.jpg) center center no-repeat;padding:150px 0;position:relative;margin-top:0px;min-height:785px}
+.our-offices .media{overflow:visible}
+.our-offices .media .media-left .media-heading{display:inline-block}
+.our-offices .media .media-body{display:inline}    
+.officesmove{margin-top:-530px!important;background-color:#f4f4f4;}
+.our-offices{background-color: #10405f;padding: 15px;min-height:190px;margin-bottom:20px}
+.our-offices .media i{color:#fff;font-size:20px}
+.our-offices .media h4{color:#fff;font-size:20px}
+.our-offices .media .media-left{border-bottom:1px solid #fff}
+.our-offices .media .media-body p{color:#fff;padding:8px 0;margin:0}
+.our-offices .media .media-body a{color: #f09a2d;text-decoration: none;font-weight: 600;font-size: 14px;}
+.our-offices .media .media-body a.mobile{display:block}
+.officess .row .col-md-6{margin-top:20px;min-height:180px}
+.officess .row .col-md-6:nth-child(2) .our-offices{background-color:#f09a2d} 
+.officess .row .col-md-6:nth-child(2) .our-offices .media .media-body a{color:#10405f}
+
+
+
+
+
+
+
+
+
+.our-logo{background-color:#f6f6f6;padding:50px 0;margin-top:60px}
+/* .our-logo .row .col-md-4:last-child{clear:both;margin-top:20px} */
+.our-logo-images{background-color:#fff;border:1px solid rgba(0,0,0,0.1);padding:10px 0}
+.our-logo-images img{margin:0 auto}
+.vcauren-links h2{font-size: 24px;color:#fff;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.2)}
+.vcauren-links ul li{display:block;color:#fff;text-align:left;margin-bottom:10px}
+.vcauren-contact p{position:relative;padding-left:25px}
+.vcauren-contact p i{position: absolute;
+    content: '';
+    left: 0;
+    top: 4px;
+    font-size: 16px;}
+footer{background-color:#11405f;padding:50px 0 50px 0}
+footer ul{margin:0;padding:0;list-style:none;text-align:center}
+footer ul li{display:inline-block}
+footer ul li a{color:#fff;font-family: 'Montserrat', sans-serif;}
+footer ul li a:hover, footer ul li a:focus{text-decoration:none;color:#a9a9a9;border-color:transparent;outline:none}
+.footer-social-icons{/* border-top:1px solid rgba(255,255,255,0.2);text-align:center; */margin-top:60px}
+.footer-social-icons a{border:1px solid #a9a9a9;background-color:#fff;color:#a9a9a9;width:47px;height:47px;line-height:47px;text-align:center;display:inline-block;-webkit-transition:all 1.2s ease 0s;
+-moz-transition:all 1.2s ease 0s;
+-ms-transition:all 1.2s ease 0s;
+transition:all 1.2s ease 0s;border-radius:40px}
+.footer-social-icons a:hover, .footer-social-icons a:focus{background-color:#fff;color:#000}
+.footer-icons-position{margin-top:-24px}
+footer p{text-align:left;color:#fff;margin:15px 0 15px 0;font-size:14px}
+.footer-links{display:inline-block}
+footer ul li{margin-right:10px}
+footer .logoimg{float:none;}
+.copyright{background-color:rgb(17 64 95 / 90%)}
+.copyright p{margin:0;padding:12px 0;color:#fff}
+
+/********************doing-business*****************/
+.doing-business-cyprus{background:url(../images/antea.jpg)center center no-repeat; position:relative;padding:58px 0;margin-top:40px;border:5px solid #ededed}
+.doing-business-cyprus h2{font-size:36px;color:#000;font-weight:600;position:relative;z-index:2;text-transform:uppercase;margin:0;padding-left:20px}
+.doing-business-cyprus:before{position:absolute;content:'';top:0;left:0;bottom:0;right:0;background:rgba(255,255,255,0.8)}
+.doing-business-netherland.doing-business-cyprus{background:url(../images/antea1.jpg)center center no-repeat; position:relative;padding:58px 0;margin-top:40px;border:5px solid #ededed}
+.doing-business-netherland.doing-business-cyprus h2{font-size:36px;color:#000;font-weight:600;position:relative;z-index:2;text-transform:uppercase;margin:0;padding-left:20px}
+.doing-business-netherland:before{position:absolute;content:'';top:0;left:0;bottom:0;right:0;background:rgba(255,255,255,0.8)}
+.doing-business-cyprus .our-services-button .btn-primary{margin-top:20px;position:relative;margin-left:20px}
+.doingcyprus.consulting.auditassurance{background:url(../images/business-auren.jpg) center center no-repeat;}
+
+
+
+/********************vcauren map*****************/
+.vcauren-map{margin-top:0px;position:relative;padding:20px;border:5px solid rgba(0,0,0,0.5);background-color:#fff}
+.vcauren-map:before{position: absolute;content: '';top: -99px;bottom: -82px;left: 0;right: 0;background-color: #fff;z-index: 1;display:none}
+.vcauren-map .mapimage{width:100%;margin:0 auto;opacity:1;float:none;position: relative;z-index: 2;}
+
+.footer-links{display:inline-block;text-align:center;width:746px;max-width:100%;}
+.footer-links p{color:#fff;font-size:20px;margin:0;}
+#Go-to-top{position:fixed;bottom:20px;right:20px;top:auto;background-color:#f09a2d;width:45px;height:45px;border-radius:100px;color:#fff;line-height:45px;text-align:center;font-size:20px;z-index:10;-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+#Go-to-top:hover, #Go-to-top:focus{box-shadow:0 0 10px rgba(0,0,0,0.7)}
+#Go-to-top:hover .fa, #Go-to-top:focus .fa{font-size:26px;}
+
+
+/********************services*****************/
+.services-bg{background-color:#f9f9f9;text-align:center;padding:30px;border-radius:10px;margin-bottom:50px;border:1px solid rgba(0,0,0,0.1)}
+.services-bg h5{font-size:18px;margin:0;padding:20px 0}
+.services-bg p{font-size:14px;margin:0;padding-bottom:10px}
+.services-bg .our-services-button .btn-primary{margin-top:20px;border-radius:0;padding:8px 12px}
+.img-bg{background-color:#f09a2d;display:inline-block;padding:20px;border-radius:50px}
+.img-bg img{width:50px;height:50px}
+.auditassurance{background:url(../images/audit.jpg) center center no-repeat;padding:150px 0;position:relative;margin-top:0px}
+.auditassurance:before{position:absolute;content:'';top:0px;left:0px;bottom:0px;right:0px;background-color:rgba(0,0,0,0.7)}
+.auditassurance h1{color:#fff;text-align:center;position:relative;z-index:1;font-size:40px;font-weight:600;letter-spacing:1px;padding-bottom:10px;top:60px}
+.auditassurance h1:before{position:absolute;content:'';width:60px;height:3px;background-color:#f09a2d;left:50%;bottom:0;margin-left:-30px}
+.audit-content h2{color:#f09a2d;font-size:25px;padding-bottom:10px;position:relative}
+.audit-content h2:before{position:absolute;content:'';left:0;width:60px;height:3px;bottom:0;background-color:#f09a2d}
+.audit-page-spacing{padding:50px 0}
+.audit-content h5{margin:0;padding:10px 0;font-size:18px;font-style:italic}
+.audit-content .worldwide{margin:0 0 10px 0;padding-top:0px;font-size:16px}
+.audit-content h6{margin:0;padding:15px 0 5px 0;font-weight:600;font-size:18px}
+.auditassurance-link{padding:0px;margin-top:0px;border-radius:0px}
+.auditassurance-link h4{background-color:#f09a2d;margin:0;padding:15px 15px;color:#fff}
+.auditassurance-link ul{list-style:none;padding:0;margin:0;border-left:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc;border-right:1px solid #dcdcdc}
+.auditassurance-link ul li{border-bottom:1px solid #222}
+.auditassurance-link ul li:last-child{border-bottom:none}
+.auditassurance-link ul .active a{padding:15px;color:#2e498e;font-size:14px;font-weight:700;display:block;font-family: 'Montserrat', sans-serif;}
+.auditassurance-link ul li a{padding:15px;color:#2e498e;font-size:14px;display:block;font-family: 'Montserrat', sans-serif;}
+.auditassurance-link ul li a:hover, .auditassurance-link ul li a:focus{color:#f09a2d;text-decoration:none}
+.audit-services-content{padding-top:20px}
+.audit-services-content h4{margin:0;padding-bottom:20px;font-size:18px;color:#2e498e;font-weight:700;text-transform:uppercase}
+.audit-services-content h4:before{}
+.audit-services-content ul{list-style:none;padding:0;margin:0}
+.audit-services-content ul li{width:48%;float: left;font-family: 'PT Sans', sans-serif;background-color: #f1f1f1;border-left: 5px solid #f09a2d;font-size: 14px;margin-bottom: 10px;padding: 12px;margin-right: 10px;min-height:auto}
+.secretarial.taxlegal.auditassurance .audit-services-content ul li{min-height:105px}
+.audit-services-content ul li:nth-child(2n+1){clear:both}
+.audit-page-spacing .audit-image{position:relative;margin-top:24px}
+.audit-page-spacing .audit-image:before{top:10px;right:10px;left:10px;bottom:10px;position:absolute;content:'';background-color:rgba(255,255,255,0.5)}
+.audit-page-spacing .audit-image:after{top:10px;right:10px;left:10px;bottom:10px;position:absolute;content:'';border:1px solid rgba(0,0,0,0.1)}
+.taxlegal.auditassurance{background:url(../images/tax.jpg) center center no-repeat;}
+.abouttax-legal.audit-content{padding-top:20px}
+.abouttax-legal.audit-content h5{font-style:normal;}
+.abouttax-legal.audit-content p{font-size:16px;margin:0;padding-bottom:15px;color:#f09a2d;font-weight:600}
+.abouttax-legal.audit-content ul{list-style:none;padding:0 0 0 10px;margin:0}
+.abouttax-legal.audit-content ul li .fa-arrow-right{color:#ddd;margin:5px 10px 0 0;float:left} 
+.abouttax-legal.audit-content ul li p{overflow:hidden;padding:0 0 5px 0;color:#222}
+.auditassurance-link ul{list-style:none;padding:0;margin:0}
+.auditassurance-link ul li{border-bottom:1px solid #f1f1f1}
+.auditassurance-link ul li{margin-right:0px;color:#f09a2d}
+.consulting.auditassurance{background:url(../images/consulting.jpg) center center no-repeat;}
+.corporate.auditassurance{background:url(../images/finance.jpg) center center no-repeat;}
+.outsourcing.auditassurance{background:url(../images/outsourcing.jpg) center center no-repeat;}
+/********************contact*****************/
+.contact-map{background:url(../images/contactus-bg.jpg);padding:150px 0}
+/* .vcauren-map.about-us-vcauren h2, .vcauren-map.about-us-vcauren h3{text-align:left}
+.vcauren-map.about-us-vcauren h3{left:10px}
+.vcauren-map.about-us-vcauren h3:before{left:32px} */
+
+
+.contactus-content h4{position:relative;font-size:30px;color:#fff;text-transform:uppercase;padding:50px 0 0px 0;margin:0}
+.contactus-content h4:before{position:absolute;content:'';left:8px;width:50px;height:3px;background-color:#f09a2d;bottom:0}
+.contactus-content{background-color:#f09a2d;padding:20px 20px 60px 20px}
+.contactus-content .executive{padding:60px 0 0 0}
+.contactus-content p{color:#fff;padding:10px 0 0px 0;font-size:18px;margin:0} 
+.contactus-content h2{font-size:24px;color:#545454;margin:0;padding-bottom:40px;font-weight:600}
+.contactus-content h3{font-size: 24px;background-color: #fff;padding: 20px 55px 20px 20px;margin: 0;position: relative;z-index: 1;display: inline-block;margin: -19px 0 0 -19px;}
+.contactus-content ul{border:1px solid #f09a2d;padding:40px 40px;margin:0;margin-top:-35px;list-style:none}
+.contactus-content ul li{font-size:18px;color:#646464;font-weight:500;font-family: 'PT Sans', sans-serif;padding-bottom:10px;position:relative;padding-left:20px}
+.contactus-content ul li:before{position:absolute;content:'';left:0;width:7px;height:7px;border-radius:10px;margin-right:20px;background-color:#f09a2d;top:25%}
+.contactus-content ul li p{color:#646464;padding:0;font-size:18px}}
+.contactus-form{padding-left:50px;margin-top:-58px}
+.contactus-form .row .col-md-6{min-height:auto}
+.contactus-form h4{font-size:35px;font-weight:600;color:#f09a2d;margin-bottom:20px}
+.contactus-form label{font-size:14px;font-family: 'PT Sans', sans-serif;color:#545454;font-weight:500}
+.contactus-form .form-control{height:46px;border-color:transparent;box-shadow:none;background-color:#f2f2f2}
+.contactus-form textarea.form-control{height:auto}
+.contactus-form .btn-primary{margin-top:15px;padding:10px 70px;background-color:#f09a2d;border:none;font-family: 'Montserrat', sans-serif;text-transform:uppercase;border-radius:40px;-webkit-transition:all 1.2s ease 0s;
+-moz-transition:all 1.2s ease 0s;
+-ms-transition:all 1.2s ease 0s;
+transition:all 1.2s ease 0s;}
+.contactus-form .btn-primary:hover, .contactus-form .btn-primary:focus{background-color:#222;color:#fff}
+.contact-country{margin-bottom:100px}
+.contact-country .contactus-content{padding-top:100px}
+.sectors.auditassurance{background:url(../images/sectors.jpg) center center no-repeat;}
+.sectors-full-content .row{margin:0 0 15px;display:table;width:100%;text-align:center}
+.sectors-full-content .row.sector-spacing > div{margin-bottom:15px;padding:0;background-color:#f1f1f1;display:table-cell;vertical-align:middle;float:none}
+.sectors-full-content .row .sectors-content{padding:20px}
+.sectors-full-content .row .sectors-content h4{font-size:18px;margin:0;padding-bottom:10px;text-transform:uppercase}
+.sectors-full-content .row .sectors-content a{text-decoration:none;font-size:16px;font-family: 'Montserrat', sans-serif;font-weight:600;color:#f09a2d}
+
+.sectors-content.audit-content ul{list-style:none;padding:20px 0;margin:0}
+.sectors-content.audit-content ul li{padding-bottom:10px;font-family: 'Montserrat', sans-serif;font-weight:500}
+.sectors-content.audit-content ul li .fa-arrow-right{margin-right:10px;color:#f09a2d}
+.valuecent-spacing{padding:60px 0}
+.team-spacing.valuecent-spacing{padding:80px 0 20px}
+.valuecent-spacing .row .col-md-6:nth-child(2n+1){clear:both}
+.valuecent-spacing .value.row{padding-bottom:25px;margin-bottom:25px;border-bottom:1px solid rgba(0,0,0,0.1)}
+.contactus.valuecent-spacing .row .col-md-6:nth-child(2n+1){clear:none}
+.valuecent-spacing .our-team{background-color:#f5f5f5;padding:20px;margin-bottom:40px;position:relative;min-height:200px}
+.valuecent-spacing .our-team h4{margin:0;line-height:22px;min-height:60px;padding-left:65px;color:#000}
+.valuecent-spacing .our-team p{margin:0;text-align:justify}
+.valuecent-spacing .our-team .person-image{position:absolute;top:-20px;left:0px}
+.valuecent-spacing .our-team .person-image img{border:3px solid #f1f1f1; max-height:90px;}
+.whyauren.auditassurance{background:url(../images/why-valuecent.jpg) center center no-repeat;margin-top:0px}
+.whyvaluecent.audit-content h2{margin:0 0 20px 0;padding-bottom:10px;font-size:38px;color:#222}
+.whyvaluecent.audit-content h2 span{font-weight:700}
+.whyvaluecent.audit-content p{text-align:justify;font-size:14px;text-align:justify}
+.whyvaluecent.audit-content h5{font-style:normal;color:#f09a2d;padding:10px 0 0 0;}
+.audit-para{padding-bottom:20px}
+.whyvaluecent.audit-content ul{list-style:none;padding:0;margin:15px 0 0 0}
+.whyvaluecent.audit-content ul li .fa-arrow-right{float:left;margin-right:10px;margin-top:15px}
+.whyvaluecent.audit-content ul li p{overflow:hidden}
+.whyauren.audit-content .advisors ul li a{font-family: 'Montserrat', sans-serif;}
+.valuecent-image{display:block;overflow:hidden;border:5px solid rgba(0,0,0,0.05);-webkit-box-shadow:inset 0 0 5px 2px rgba(0,0,0,0.07);box-shadow:inset 0 0 5px 2px rgba(0,0,0,0.07)}
+.valuecent-image img{}
+.valuecent-image img{-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;z-index:-1;position:relative}
+.valuecent-image:hover img{transform:scale(1.2);-webkit-transform:scale(1.2);-ms-transform:scale(1.2)}
+.cyprus-document h2{margin:0;padding:15px 0;color:#f09a2d}
+.cyprus-document p{margin:0;font-size:16px;color:#000;padding:2px 0}
+.vcauren-table h4{font-weight:700;font-size:24px;color:#f09a2d}
+.vcauren-table h5{font-weight:600;font-size:20px;color:#f09a2d}
+.vcauren-table ul{padding-top:5px;padding-bottom:5px;margin:0}
+.vcauren-table .custom-space{margin-bottom:10px}
+.vcauren-table ul li{font-family: 'Montserrat', sans-serif;color:#666}
+.vcauren-table .table-striped{border:1px solid #ddd}
+.vcauren-table .table.table-striped tr th{font-family: 'Montserrat', sans-serif;color:#f09a2d;font-weight:600;font-size:17px}
+.vcauren-table .table.table-striped tr td{font-family: 'Montserrat', sans-serif;padding:8px 15px 8px 8px}
+.vcauren-table .table.table-striped tr td p{font-size:16px;color:#000;margin:0;padding:10px 15px 10px 0}
+.vcauren-table .table.table-striped tr td span{display:block;}
+.vcauren-table .table.table-striped tr td ul{padding:0;margin:0}
+.vcauren-table .table.table-striped tr td ul li{color:#555}
+.vcauren-table .table.table-striped tr td .income-rate{padding:0;margin:0;width:260px;list-style:none}
+.vcauren-table .table.table-striped tr td .income-rate li span{float:right}
+.uk-border{border:1px solid #000}
+.vcauren-table .table.table-striped .uk-border tr th{background-color:rgba(0,0,0,0.7);color:#fff;padding:7px}
+.uk-border tr td{border-bottom:1px solid #000;border-right:1px solid #000}
+
+/********************modal*****************/
+
+.modal-vcauren-fullpopup .modal-dialog .modal-body iframe{width:100%;height:615px;border:none;display:block}
+.modal-vcauren-fullpopup .modal-header{padding:0;border-bottom:none}
+.modal-vcauren-fullpopup .modal-body{padding:0px}
+.modal-vcauren-fullpopup .modal-header .close{position:absolute;right:-9px;background-color:#2e498e;color:#fff;opacity:1;border:2px solid #fff;top:-7px;width:35px;height:35px;line-height:19px;z-index:999;border-radius:100px;font-size:22px}
+.modal-vcauren-fullpopup .modal-header .close span{width:12px;height:18px;line-height:7px;display:inline-block}
+.modal-vcauren-fullpopup .modal-header .close:hover, .modal-vcauren-fullpopup .modal-header .close:focus{outline:none;background-color:#f09a2d}
+.modal-vcauren-fullpopup .modal-content{background-color:#fff}
+.logo-footer.navbar-brand{display:none}
+
+/*****************************************************/
+.header-caption{padding: 1em 2em;
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+	color:#fff}
+	
+.header-caption .cd-headline{background-color: rgba(0,0,0,0.6);
+    margin: 0;
+    padding: 10px;
+line-height: 36px;
+font-size:32px;
+font-weight:400;
+}
+
+.cd-intro {
+  margin: 4em auto;
+}
+@media only screen and (min-width: 768px) {
+  .cd-intro {
+    margin: 5em auto;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-intro {
+    margin: 6em auto;
+  }
+}
+.cd-headline {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+@media only screen and (min-width: 768px) {
+  .cd-headline {
+    font-size: 4.4rem;
+    font-weight: 300;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-headline {
+    font-size: 6rem;
+  }
+}
+.cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+.cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+}
+.cd-words-wrapper b.is-visible {
+  position: relative;
+}
+.no-js .cd-words-wrapper b {
+  opacity: 0;
+}
+.no-js .cd-words-wrapper b.is-visible {
+  opacity: 1;
+}
+/* -------------------------------- 
+
+xclip 
+
+-------------------------------- */
+
+.cd-headline.clip span {
+  display: inline-block;
+  padding: .2em 0;
+}
+.cd-headline.clip .cd-words-wrapper {
+  overflow: hidden;
+  vertical-align: top;
+}
+.cd-headline.clip .cd-words-wrapper::after {
+  /* line */
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #3d3d3d;
+}
+.cd-headline.clip b {
+  opacity: 0;
+}
+.cd-headline.clip b.is-visible {
+  opacity: 1;
+}
+
+
+/* .nerdy-pen {
+ padding: 1em 2em;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+	color:#fff
+}
+.nerdy-pen h1{background-color: rgba(0,0,0,0.6);
+    margin: 0;
+    padding: 15px;
+line-height: 42px;} */
+
+
+
+
+/********************responsive*****************/
+@media(max-width:1680px){
+	.main-banner .carousel-inner .item .carousel-caption h2{font-size:40px}
+	.services-inner-boxes{padding:0 20px 10px 20px}
+	.services-inner-boxes p{min-height:125px}
+	.read-more-btn{margin:0px 0px}
+	.about-us p, .services-inner-boxes p, .whyvaluecent.audit-content p{font-size:14px;}
+	.services-inner-boxes h3{font-size:18px}
+	.main-trust-content{padding:150px 0}
+	.main-trust-content h1{font-size:60px}
+	.auditassurance{padding:130px 0}
+	.sectors.auditassurance{background-position:87% 34%}
+}
+@media(max-width:1400px){
+	.project-counting-process{bottom:0}
+	.project-counting.global-economy h2{font-size:32px}
+	.project-counting.global-economy .countdown-content img{width:75px}
+	.about-us, .our-services{padding:70px 0}
+	.video-alliance-firms{padding-bottom:100px}
+	.main-banner .carousel-inner .item .carousel-caption h2{font-size:36px;font-weight:600}
+	.contribution-color1, .contribution-color2, .contribution-color3, .contribution-color4{padding:10px}
+	.contribution-color span{font-size:40px}
+	.contribution-color p{font-size:20px}
+	header .navbar-default .navbar-nav > li .dropdown-menu li a{font-size:14px;padding:8px 20px}
+	.services-inner-boxes{padding:10px}
+	.read-more-btn{margin:0 -10px}
+	.services-inner-boxes p{font-size:14px;}
+	.auditassurance{padding:105px 0}
+	.auditassurance h2{top:78px;font-size:28px}
+	footer{padding:40px 0}
+}
+@media(max-width:1366px){
+	header .navbar-default .navbar-nav > li > a{font-size:14px}
+}
+@media(max-width:1280px){
+	.main-banner video{height:auto}
+	.about-us, .our-services{padding:50px 0}
+	.video-alliance-firms{padding-bottom:100px}
+	.services-inner-boxes p{min-height:141px}
+	.whyauren.auditassurance{background-position:57% 60%}
+	.auditassurance{padding:100px 0}
+	.valuecent-spacing .our-team{min-height:220px}
+	footer p{margin:25px 0 30px 0}
+}
+@media(max-width:1199px){
+	.main-banner .carousel-inner .item .carousel-caption h2{font-size:32px;}
+	.our-services .row .col-md-3{width:33.3%}
+	.our-services .row .col-md-3:nth-child(4){width:33.3%;margin-left:16.7%;margin-top:6px}
+	.our-services .row .col-md-3:nth-child(5){width:33.3%;margin-right:16.7%;margin-top:6px}
+	.services-inner-boxes p{min-height:100px}
+	.about-us-vcauren h2:before{bottom:-3px}
+	.about-us p{padding-top:0px}
+	.about-valuecent-image img{padding:15px 0}
+	.sectors-full-content .row .sectors-content h4{font-size:16px}
+	.sectors-full-content .row .sectors-content a{font-size:14px}
+	.valuecent-spacing .our-team{min-height:260px}
+	.right-content .icon_text{width:370px}
+	.right-content .icon_text .icon{margin-bottom:40px}
+}
+@media(max-width:1024px){
+	.main-banner .carousel-inner .item .carousel-caption h2{font-size:28px}
+}
+@media(min-width:991px){
+	.navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+}
+}
+@media(max-width:991px){
+	header .navbar-default .navbar-header{float:none}
+	header{position:static}
+	header .navbar-default .navbar-header .navbar-brand img{width:80px;-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+	header.header_fixed .navbar-default .navbar-header .navbar-brand img{width:62px}
+	header .navbar-default .navbar-header .navbar-toggle{margin:23px 0;border-radius:0;background-color:#f29c2b;border:1px solid #f09a2d;padding:14px 10px;-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+	header .navbar-default .navbar-header .navbar-toggle span{background-color:#fff;width:30px}
+	header.header_fixed .navbar-default .navbar-header .navbar-toggle{margin:16px 0}
+	header .navbar-nav{padding:0;background-color:#2e498e}
+	header .navbar-nav > li{display:block}
+	header .navbar-default .navbar-nav > li.active > a, header .navbar-default .navbar-nav > li > a{color:#fff;-webkit-transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-ms-transition:all 1.2s ease 0s;transition:all 1.2s ease 0s;}
+	header .navbar-default .navbar-nav > li.active > a:hover, header .navbar-default .navbar-nav > li.active > a:focus{color:#f29c2b}
+	header .navbar-default .navbar-nav > li.active > a:before, header .navbar-default .navbar-nav > li > a:hover:before{display:none}
+	header .navbar-default .navbar-nav > li .dropdown-menu{display:block;opacity:1;position:static;text-align:center;float:none;border:none}
+	header .navbar-default .navbar-nav > li .dropdown-menu li{background-color:#f1f1f1;display:block;color:#000;margin-bottom:1px}
+	header .navbar-default .navbar-nav > li .dropdown-menu li a{color:#000;}
+	header .navbar-default{min-height:50px;height:100%}
+	header.header_fixed{position:fixed;padding:0}
+	.logo-footer.navbar-brand{display:block;height: 100%;padding: 5px;}
+	.close-menu{display:block;padding-bottom:20px;text-align:right;}
+	.close-menu a{color:#fff;font-family: 'Montserrat', sans-serif;padding:10px;background-color:#f29c2b;display:inline-block}
+	.navbar-default .navbar-collapse{position:fixed;width:250px;right:-250px;top:0;bottom:0;padding:0;background-color:#2e498e;display:block!important;height:auto!important;overflow-y:auto!important;overflow-x:hidden;border-left:2px solid #ededed;z-index:999;-webkit-transition:all 0.5s ease 0s;-moz-transition:all 0.5s ease 0s;-ms-transition:all 0.5s ease 0s;transition:all 0.5s ease 0s;}
+	.navbar-default .navbar-collapse.in{right:0}
+	.services-inner-boxes p{min-height:122px}
+	.about-us-vcauren{margin-top:10px}
+	.about-us-vcauren h2{text-align:center}
+	.about-us-vcauren h2:before{left:50%;transform:translateX(-50%)}
+	.valuecent-image img{width:100%}
+	.whyvaluecent.audit-content{margin-top:20px}
+	.valuecent-spacing .our-team h4{font-size:16px}
+	.audit-content{margin-top:30px}
+	.audit-page-spacing .audit-image{margin-top:0px}
+	.contactus-content .executive{padding:20px 0 0 0}
+	.contactus-content{padding:20px}
+	.contactus-content h4{padding:20px 0 0 0}
+	.contactus-content .executive br{display:none}
+	.valuecent-spacing .our-team{min-height:307px}
+	.top-content{position:static;padding-top:0px;display:none}
+	.right-content .icon_text{display:none}
+	header .navbar-default .navbar-header .navbar-toggle{position: absolute;right: 15px;top: -8px}
+	.header-caption .cd-headline{font-size:22px}
+	.main-banner{height:88vh}
+	.about-valuecent-image img{padding:15px 0 0 0}
+	.vcauren-content{position:static;transform:none;width:100%}
+	.project-counting-process{padding:35px 0}
+	.project-counting.global-economy h2{padding-left:15px}
+	.project-counting.global-economy h2{text-align:center}
+	.project-counting.global-economy .countdown-content{margin-bottom:50px}
+	.project-counting.global-economy .countdown-content h3{padding:0px}
+	.project-counting-process{position:static;transform:none;background-color:#576da4}
+	.auditassurance{padding:80px 0}
+	.auditassurance h2{top:0px}
+}
+@media(max-width:767px){
+	header .navbar-default .navbar-header .navbar-toggle{margin:23px 0px 23px 0}
+	header.header_fixed .navbar-default .navbar-header .navbar-toggle{margin:16px 0px 16px 0}
+	header .navbar-default .navbar-header .navbar-brand{width:auto}
+	.container > .navbar-collapse{margin-left:0;margin-right:0;border-top:0}
+	.auditassurance h2{font-size:24px}
+	.auditassurance{padding:30px 0}
+	.main-banner .carousel-control span{display:none}
+	.main-banner .carousel-inner .item .carousel-caption h2{display:block}
+	.main-banner .carousel-inner .item .carousel-caption{position:static;top:100%;padding:0;width:100%;transform:none}
+	.main-banner .carousel-indicators{bottom:75px}
+	.services-inner-boxes p{min-height:30px}
+	.valuecent-fullsection{margin-bottom:15px}
+	.our-services .row .col-md-3{width:100%}
+	.our-services .row .col-md-3:nth-child(4){width:100%;margin-left:0;margin-top:6px}
+	.our-services .row .col-md-3:nth-child(5){width:100%;margin-right:0;margin-top:6px}
+	.project-counting.global-economy .countdown-content{margin-bottom:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.5);}
+	.project-counting.global-economy .row .col-md-4:first-child .countdown-content{border-top:none}
+	.main-banner .carousel-inner .item .carousel-caption h2{font-size:20px}
+	footer p{margin:0 0 15px 0}
+	footer .logoimg{margin-bottom:20px}
+	.valuecent-spacing .our-team{min-height:auto}
+	.top-content .navbar-header .navbar-brand{width:97px}
+	.main-banner{height:auto}
+	.ouroffices.auditassurance{padding:70px 0;min-height:200px}
+	.officesmove{margin-top:0px!important}
+	.team-spacing.valuecent-spacing{padding:35px 0 20px}
+	.our-offices{min-height:145px}
+    .countries ul li {margin: 7px 0;}
+}
+@media(max-width:535px){
+	.audit-services-content ul li{width:100%;float:none}
+	.project-counting.global-economy h2{font-size:24px;padding-left:0px}
+	.latest-news{background-attachment:initial}
+	.header-caption .cd-headline{font-size:14px!important}
+	.header-caption{top:36%}
+	.our-partner .media .media-left{display:block}
+	.our-partner .media .media-left img{margin:0 auto}
+	.our-partner .media .media-body{border-top:2px solid #e5e5e5;border-left:2px solid transparent;padding-left:0px;padding-top:15px}
+	.our-partner .media .media-body:before{position: absolute;
+    content: '';
+    left: -3px;
+    top: -3px;
+    background-color: #10405f;
+    width: 35px;
+    height: 4px;}
+	.right-sidebar .media{margin-bottom:20px;padding-bottom:20px}
+	.right-sidebar .media img{height:120px}
+}
+@media(max-width:420px){
+	.antea-memeber{padding-bottom:185px}
+	.latest-news-boxes img{padding:0}
+	.news-content.about-us-vcauren strong{font-size:95px}
+	.video-alliance-firms .video-play-spacing{padding:10px 0}
+	.video-alliance-firms .video-play-spacing img{width:30px}
+	.header-caption{top:28%}
+}
+
+/**
+    MY CSS
+**/
+
+.outsource-Your-Accounting {
+    padding: 5em 0em;
+}
+
+.outsource-Your-Accounting .thumbnail {
+    padding:15px;
+    border: 1px #ccc solid;
+    min-height: 354px;
+}
+
+.outsource-Your-Accounting .thumbnail p {
+    line-height: 24px;
+}
+
+.outsource-Your-Accounting .our-services-content p {
+    padding-bottom: 30px;
+    padding-top: 0px;
+}
+
+
+
+
+

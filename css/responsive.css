@@ -1,0 +1,187 @@
+
+@media only screen and (min-width:1200px) and (max-width:1365px) {
+
+    .bannerForm {
+        top: 18%;
+    }
+
+    .bannerForm input[type="text"] {
+        margin-bottom: 8px;
+    }
+
+    .bannerForm input[type="email"] {
+        margin-bottom: 8px;
+    }
+
+    .bannerForm input[type="tel"] {
+        margin-bottom: 8px;
+    }
+
+    .bannerForm select {
+        margin-bottom: 8px;
+    }
+
+}
+
+@media only screen and (min-width:1366px) and (max-width:1600px) {
+
+    .bannerForm {
+        top: 18%;
+    }
+
+    .bannerForm input[type="text"] {
+        margin-bottom: 8px;
+    }
+
+    .bannerForm input[type="email"] {
+        margin-bottom: 8px;
+    }
+
+    .bannerForm input[type="tel"] {
+        margin-bottom: 8px;
+    }
+
+    .bannerForm select {
+        margin-bottom: 8px;
+    }
+
+}
+
+@media (max-width: 991px){
+.menu a.logo {
+    width: 80px!important;
+        padding: 0px 0px;
+}
+.navbar-shrink .menu a.logo{
+     width: 80px!important;
+         padding: 0px 0px;
+}
+.menu-mobile {
+    display: block;
+    float: right;
+    padding: 10px 10px 0;
+}
+
+
+}
+
+
+
+@media (max-width: 767px){
+    #particles-js .carousel-item img {
+    height: 36vh;
+}
+.header {
+    height: 88px;
+}
+.fixed-top {
+    top: 87px;
+}
+.fixed-top.navbar-shrink {
+     top: 87px;
+}
+#particles-js {
+    margin-top: 11rem;
+}
+.bannerFormBtm form {
+    display: block;
+}
+    
+  .wrapper .item {
+    margin: 0.2rem 0;
+}
+.social-media-section iframe {
+  
+
+    margin: 1rem 0;
+}
+.ourServices h2 {
+    font-size: 1.9em;
+}
+.outsourceBookkeeping h2 {
+    font-size: 1.7em;
+}
+.whyValuecent h2 {
+    font-size: 1.7em;
+}
+.aboutUs h2 {
+    font-size: 2em;
+    margin-top: 2rem;
+    text-transform: uppercase;
+}
+.popUpForm {
+ 
+    padding-top: 0px;
+}
+
+.wrapper h2 {
+    font-size: 1.8em;
+}
+
+.wrapper-content {
+    padding: 10px;
+}
+.popUpImg{
+    display: none;
+}
+.aboutHcontent {
+    padding-left: 0.8em;}
+.popUpForm{
+    width: 100%;
+}
+.ourServices .pull-devices {
+    width: 100%;
+    }
+    .cnt223{
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .bannerFormBtm input[type="text"] {
+    width: 100%;
+}
+.bannerFormBtm input[type="tel"] {
+    width: 100%;
+}
+.bannerFormBtm select{
+    width: 100%;
+}
+.bannerFormBtm input[type="submit"]{
+    width: 100%;
+}
+.bannerFormBtmCaptcha {
+    width: 100%;
+}
+.bannerFormBtm .bannerFormBtmCaptcha input[type="text"]{
+    width: 82%;
+}
+.bannerForm {
+    position: inherit;
+    top: 0;
+    right: 0;
+    z-index: 9999999;
+}
+#mainNav {
+    padding-top: 0.6rem;
+    padding-bottom: 0rem;
+}
+
+
+    
+
+}
+
+
+
+
+@media (max-width: 991px){
+    .section-title {
+    margin-bottom: 1rem;
+}
+    .section-title h2{
+    font-size: 1.6em;
+    }
+    .g-sec-padding{
+    padding: 2rem 5px;
+}
+}
